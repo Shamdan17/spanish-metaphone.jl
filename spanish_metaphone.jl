@@ -59,9 +59,7 @@ function metaphone(s::AbstractString, key_length=6)
         end
         #get character from the string
         current_char = original_string[current_pos]
-#         @show current_char
-#         @show current_pos
-#         @show original_string
+        
         if is_vowel(current_char) && current_pos==1
             meta_key *= current_char
             current_pos = nextind(original_string, current_pos)
